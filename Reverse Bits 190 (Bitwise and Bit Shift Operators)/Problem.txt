@@ -1,0 +1,3 @@
+Reverse bits of a given 32 bits unsigned integer.
+Input:            n = BIN(00000010100101000001111010011100)
+Output:               BIN(00111001011110000010100101000000)
