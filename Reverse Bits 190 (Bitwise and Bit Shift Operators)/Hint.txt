@@ -12,6 +12,7 @@ Shift example:
 
 
 Reverse Example: 
+Input: 1001
 1001 
 &  1
 =  1
