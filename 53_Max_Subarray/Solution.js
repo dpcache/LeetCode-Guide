@@ -16,3 +16,24 @@ var maxSubArray = function(nums) {
     }
     return maxSum
 };
+
+
+// My solution
+var maxSubArray = function(nums) {
+    let max = nums[0];
+    let currAmount = 0;
+    
+    for (let i = 0; i < nums.length; i++) {
+        currAmount = currAmount + nums[i];
+        if (max < nums[i] && nums[i] < 0) 
+        {
+            max = nums[i];
+        } 
+        if (currAmount < 0) {
+            currAmount = 0;
+        } else if (currAmount > max) {
+            max = currAmount;
+        }
+    }
+    return max; 
+};
