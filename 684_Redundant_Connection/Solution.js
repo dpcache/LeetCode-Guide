@@ -18,7 +18,7 @@ var findRedundantConnection = function(edges) {
     // Find if they all come from the same tree.
     function union(x,y) {
         //console.log(x,y);
-        parents[find(y)] = find(x);
+        parents[find(x)] = find(y); // or parents[find(y)] = find(x);
         //console.log("find(x): " + find(x));
         //console.log("UNION: " + parents);
     }
