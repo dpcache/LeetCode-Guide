@@ -37,3 +37,27 @@ var permute = function (nums) {
 
     return res;
 };
+
+/// Option 2
+var permute = function(nums) {
+    
+    const res = [];
+    const permutations = new Set();
+    dfs();
+    return res;
+    
+    function dfs() {
+        if (permutations.size === nums.length) {
+            return res.push([...permutations]);
+        }
+        
+        for (let i = 0; i < nums.length; i++) {
+            if (permutations.has(nums[i])) {
+                continue; 
+            }
+            permutations.add(nums[i]); 
+            dfs();  
+            permutations.delete(nums[i]);
+        }
+    }
+}
